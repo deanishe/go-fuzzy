@@ -1,6 +1,12 @@
 fuzzy
 =====
 
+![Build Status][github-status-icon]
+[![Go Report Card][goreport-icon]][goreport-link]
+[![Codacy coverage][coverage-icon]][codacy-link]
+[![GitHub licence][licence-icon]][licence-link]
+[![GoDoc][godoc-icon]][godoc-link]
+
 Package fuzzy implements fuzzy matching/sorting of string slices and custom types (via `fuzzy.Sortable` interface).
 
 Import path is `go.deanishe.net/fuzzy`
@@ -142,3 +148,12 @@ Licence
 [godoc]: https://godoc.org/go.deanishe.net/fuzzy
 [forrest]: https://blog.forrestthewoods.com/reverse-engineering-sublime-text-s-fuzzy-match-4cffeed33fdb
 [mit]: ./LICENCE.txt
+[godoc-icon]: https://godoc.org/go.deanishe.net/fuzzy?status.svg
+[godoc-link]: https://godoc.org/go.deanishe.net/fuzzy
+[goreport-link]: https://goreportcard.com/report/github.com/deanishe/go-fuzzy
+[goreport-icon]: https://goreportcard.com/badge/github.com/deanishe/go-fuzzy
+[coverage-icon]: https://img.shields.io/codacy/coverage/9cdd179cb6ce4236979ef01915b9e6eb?color=brightgreen
+[codacy-link]: https://www.codacy.com/app/deanishe/go-fuzzy
+[licence-icon]: https://img.shields.io/github/license/deanishe/go-fuzzy
+[licence-link]: https://github.com/deanishe/go-fuzzy/blob/master/LICENCE.txt
+[github-status-icon]: https://img.shields.io/github/workflow/status/deanishe/go-fuzzy/Test
