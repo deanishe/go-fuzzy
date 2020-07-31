@@ -1,0 +1,49 @@
+name: Test
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        go-version: [1.13.x, 1.14.x]
+        platform: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.platform }}
+    steps:
+      - name: Install Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: ${{ matrix.go-version }}
+
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Get dependencies
+        run: go get -v -t -d ./...
+
+      - name: Install linters
+        run: |
+          go get golang.org/x/lint/golint
+          go get github.com/golangci/golangci-lint/cmd/golangci-lint
+
+      - name: Lint source code
+        run: |
+          golint -set_exit_status ./...
+          golangci-lint run -c .golangci.toml
+
+      - name: Run unit tests
+        run: go test -coverprofile=coverage.out ./...
+
+      - name: Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          file: coverage.out
+
+      - name: Codacy
+        run: |
+          go install github.com/schrej/godacov
+          godacov -r coverage.out -t ${{ secrets.CODACY_TOKEN }} -c ${{ github.sha }}
