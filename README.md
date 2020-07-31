@@ -1,7 +1,7 @@
 fuzzy
 =====
 
-![Build Status][github-status-icon]
+[![CI status][github-status-icon]][github-status-link]
 [![Go Report Card][goreport-icon]][goreport-link]
 [![Codacy coverage][coverage-icon]][codacy-link]
 [![GitHub licence][licence-icon]][licence-link]
@@ -156,4 +156,5 @@ Licence
 [codacy-link]: https://www.codacy.com/app/deanishe/go-fuzzy
 [licence-icon]: https://img.shields.io/github/license/deanishe/go-fuzzy
 [licence-link]: https://github.com/deanishe/go-fuzzy/blob/master/LICENCE.txt
-[github-status-icon]: https://img.shields.io/github/workflow/status/deanishe/go-fuzzy/Test
+[github-status-icon]: https://github.com/deanishe/go-fuzzy/workflows/CI/badge.svg
+[github-status-link]: https://github.com/deanishe/go-fuzzy/actions?query=workflow%3ACI
