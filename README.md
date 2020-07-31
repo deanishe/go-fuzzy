@@ -1,6 +1,8 @@
 fuzzy
 =====
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9cdd179cb6ce4236979ef01915b9e6eb)](https://app.codacy.com/manual/deanishe/go-fuzzy?utm_source=github.com&utm_medium=referral&utm_content=deanishe/go-fuzzy&utm_campaign=Badge_Grade_Settings)
+
 Package fuzzy implements fuzzy matching/sorting of string slices and custom types (via `fuzzy.Sortable` interface).
 
 Import path is `go.deanishe.net/fuzzy`
